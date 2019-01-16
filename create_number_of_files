@@ -1,0 +1,15 @@
+createfiles.sh
+
+#!/bin/bash
+# This script creates number of files according to input
+
+echo "What would you like to have as the files frist name?"
+read a
+echo "How many files would you like to create?"
+read b
+count=${b}
+((++count))
+while  ((--count >=1))
+do
+touch $a$count
+done  
