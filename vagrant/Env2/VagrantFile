@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+
+# vi: set ft=ruby :
+# This config file will create 4 VMs - web, db, file and nagios
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define :web do |web_config|
+      web_config.vm.box = "centos/7"
+      web_config.vm.network :private_network, ip: "192.168.101.21"
+  end
+
+  config.vm.define :db do |db_config|
+      db_config.vm.box = "centos/7"
+      db_config.vm.network :private_network, ip: "192.168.101.22"
+  end
+
+  config.vm.define :file do |file_config|
+      file_config.vm.box = "centos/7"
+      file_config.vm.network :private_network, ip: "192.168.101.23"
+  end
+
+  config.vm.define :nagios do |nagios_config|
+      nagios_config.vm.box = "centos/7"
+      nagios_config.vm.network :private_network, ip: "192.168.101.15"
+  end
+
+end
