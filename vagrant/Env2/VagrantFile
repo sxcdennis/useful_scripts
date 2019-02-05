@@ -1,6 +1,3 @@
-# -*- mode: ruby -*-
-
-# vi: set ft=ruby :
 # This config file will create 4 VMs - web, db, file and nagios
 
 Vagrant.configure("2") do |config|
